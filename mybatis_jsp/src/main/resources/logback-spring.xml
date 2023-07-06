@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>[%d{yyyy-MM-dd HH:mm:ss}:%-3relative] [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </encoder>
+    </appender>
+
+    <!-- Logback 은 5단계의 로그 레벨을 가진다.
+        심각도 수준은 off > Error > Warn > Info > Debug > Trace 이다.
+    -->
+    <!-- 
+        📌 logger name 부분을 변경
+    -->
+    <logger name="com.lililli.mybatis_jsp" level="Debug"/>
+    <root level="Info">
+        <appender-ref ref="console"/>
+    </root>
+</configuration>
